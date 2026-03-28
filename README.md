@@ -1,3 +1,5 @@
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Cucumber](https://img.shields.io/badge/Cucumber-7.20.1-green)
 # Cucumber + Selenium 自动化测试框架
 
 ## 项目简介
