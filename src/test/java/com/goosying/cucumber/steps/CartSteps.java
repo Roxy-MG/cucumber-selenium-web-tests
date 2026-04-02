@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CartSteps {
     private final CartPage cartPage;
@@ -21,6 +21,6 @@ public class CartSteps {
     public void assertCart(List<Map<String,String>> expCartList) {
         Set<Map<String, String>> expCart = new HashSet<>(expCartList);
         Set<Map<String, String>> realCart = cartPage.getCartItems();
-        assertEquals(expCart, realCart);
+        assertIterableEquals(expCart, realCart);
     }
 }

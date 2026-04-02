@@ -7,6 +7,7 @@ public class ConfigReader {
 
     private static Properties properties = new Properties();
 
+    // 静态初始化加载
     static {
         try (InputStream input = ConfigReader.class
                 .getClassLoader()
