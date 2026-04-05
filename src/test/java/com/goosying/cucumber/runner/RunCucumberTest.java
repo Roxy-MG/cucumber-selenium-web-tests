@@ -14,7 +14,7 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 // feature在classpath的位置
 @SelectClasspathResource("features")
 // 报告生成的目录
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-reports.html")
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-reports/cucumber.html, json:target/cucumber-reports/cucumber.json")
 // steps位置
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.goosying.cucumber.steps")
 // 并行开关
