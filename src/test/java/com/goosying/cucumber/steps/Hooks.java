@@ -21,7 +21,7 @@ public class Hooks {
 
     @Before
     public void openDriver(Scenario scenario) {
-        if (driverManager.isCI()){
+        if (System.getenv("CI") != null){
             driverManager.setDriver("chrome");
             return;
         }

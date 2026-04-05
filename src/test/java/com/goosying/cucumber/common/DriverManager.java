@@ -11,11 +11,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class DriverManager {
     // 通过PicoContainer，让Scenario共用一个实例
     private WebDriver driver;
-    private boolean isCI;
 
     // 初始化浏览器
     public void setDriver(String driverType) {
-        isCI = System.getenv("CI") != null;
+        boolean isCI = System.getenv("CI") != null;
         if (driver == null) {
             if("chrome".equals(driverType)){
                 ChromeOptions options = new ChromeOptions();
@@ -25,6 +24,7 @@ public class DriverManager {
                 }
                 if (isCI){
                     options.addArguments("--headless");
+                    options.addArguments("--window-size=1920,1080");
                 }
                 driver = new ChromeDriver(options);
             }else if("edge".equals(driverType)){
