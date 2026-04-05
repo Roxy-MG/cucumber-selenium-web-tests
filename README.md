@@ -1,5 +1,6 @@
 ![Java](https://img.shields.io/badge/Java-17-blue)
 ![Cucumber](https://img.shields.io/badge/Cucumber-7.20.1-green)
+[![UI Tests](https://github.com/Roxy-MG/cucumber-selenium-web-tests/actions/workflows/ui-tests.yml/badge.svg)](https://github.com/Roxy-MG/cucumber-selenium-web-tests/actions/workflows/ui-tests.yml)
 # Cucumber + Selenium 自动化测试框架
 
 ## 项目简介
