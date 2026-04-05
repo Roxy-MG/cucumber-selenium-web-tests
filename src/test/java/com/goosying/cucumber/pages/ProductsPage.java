@@ -39,6 +39,6 @@ public class ProductsPage extends BasePage{
     }
 
     public void clickCartItem(){
-        waitForClickable(SHOPPING_CART).click();
+        jsClick(waitForClickable(SHOPPING_CART));
     }
 }
