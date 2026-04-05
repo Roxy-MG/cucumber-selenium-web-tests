@@ -23,9 +23,9 @@ public class ProductsPage extends BasePage{
 
     public void BuyProduct(String productsName){
         switch (productsName){
-            case "Sauce Labs Backpack" -> waitForClickable(BUY_SAUCE_LABS_BACKPACK).click();
-            case "Sauce Labs Bike Light" -> waitForClickable(BUY_SAUCE_LABS_BIKE_LIGHT).click();
-            case "Sauce Labs Bolt T-Shirt" -> waitForClickable(BUY_SAUCE_LABS_BOLT_T_SHIRT).click();
+            case "Sauce Labs Backpack" -> jsClick(waitForClickable(BUY_SAUCE_LABS_BACKPACK));
+            case "Sauce Labs Bike Light" -> jsClick(waitForClickable(BUY_SAUCE_LABS_BIKE_LIGHT));
+            case "Sauce Labs Bolt T-Shirt" -> jsClick(waitForClickable(BUY_SAUCE_LABS_BOLT_T_SHIRT));
             default -> throw new IllegalArgumentException("没有此商品");
         }
     }

@@ -2,6 +2,7 @@ package com.goosying.cucumber.pages;
 
 import com.goosying.cucumber.common.DriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,6 +34,11 @@ public class BasePage {
     // 等待单个元素可点击，并返回元素
     protected WebElement waitForClickable(By by) {
         return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    // 使用js强制点击
+    public void jsClick(WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
 
     // 等待弹窗出现
