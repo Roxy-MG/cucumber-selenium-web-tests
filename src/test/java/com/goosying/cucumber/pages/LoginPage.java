@@ -31,7 +31,7 @@ public class LoginPage extends BasePage{
     }
 
     public void clickLogin(){
-        waitForClickable(LOGIN_BUTTON).click();
+        jsClick(waitForClickable(LOGIN_BUTTON));
     }
 
     public boolean isOnProductsPage(){
