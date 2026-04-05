@@ -14,8 +14,9 @@ public class BuySteps {
     }
 
     @When("点击购买:{string}")
-    public void clickBuySauceLabsBackpack(String productName) {
-        productsPage.BuySauceLabsBackpack(productName);
+    public void addToCart(String productName) throws InterruptedException {
+        productsPage.BuyProduct(productName);
+        Thread.sleep(500);
     }
 
     @Then("购物车数量显示为:{int}")

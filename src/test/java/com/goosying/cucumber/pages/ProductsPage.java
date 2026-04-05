@@ -21,7 +21,7 @@ public class ProductsPage extends BasePage{
         super(driverManager);
     }
 
-    public void BuySauceLabsBackpack(String productsName){
+    public void BuyProduct(String productsName){
         switch (productsName){
             case "Sauce Labs Backpack" -> waitForClickable(BUY_SAUCE_LABS_BACKPACK).click();
             case "Sauce Labs Bike Light" -> waitForClickable(BUY_SAUCE_LABS_BIKE_LIGHT).click();
