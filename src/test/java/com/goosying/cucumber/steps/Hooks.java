@@ -21,7 +21,10 @@ public class Hooks {
 
     @Before
     public void openDriver(Scenario scenario) {
-        System.out.println(scenario.getName()+"，当前线程:"+Thread.currentThread().getName());
+        if (driverManager.isCI()){
+            driverManager.setDriver("chrome");
+            return;
+        }
         String driverType = "chrome";
         if(scenario.getSourceTagNames().contains("@edge")){
             driverType = "edge";
