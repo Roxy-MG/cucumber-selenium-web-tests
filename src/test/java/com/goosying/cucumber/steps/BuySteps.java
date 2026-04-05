@@ -14,13 +14,14 @@ public class BuySteps {
     }
 
     @When("点击购买:{string}")
-    public void addToCart(String productName) throws InterruptedException {
+    public void addToCart(String productName) {
         productsPage.BuyProduct(productName);
-        Thread.sleep(500);
+        System.out.println("点击购买: " + productName);
     }
 
     @Then("购物车数量显示为:{int}")
-    public void assertShoppingCartBadge(int badge) {
+    public void assertShoppingCartBadge(int badge) throws InterruptedException {
+        Thread.sleep(3000);
         assertEquals(badge, productsPage.getShoppingCartBadge(), "购物车角标数量校验失败");
     }
 
